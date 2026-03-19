@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const treatments = [
@@ -176,14 +177,15 @@ export default function Home() {
       <section className="py-16" style={{ backgroundColor: "#F5EDEA" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Doctor Image Placeholder */}
-            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden" style={{ background: "linear-gradient(135deg, #1A6B6B 0%, #2D9B9B 100%)", minHeight: 360 }}>
-              <div className="h-full flex flex-col items-center justify-center p-10 text-white text-center">
-                <div className="w-24 h-24 rounded-full mb-4 flex items-center justify-center text-5xl" style={{ backgroundColor: "rgba(255,255,255,0.15)" }}>👩‍⚕️</div>
-                <p className="text-lg font-bold">Dr. Sireesha</p>
-                <p className="text-sm text-white/70 mt-1">MD Dermatology</p>
-                <p className="text-xs text-white/50 mt-1">Yashvini Skin &amp; Hair Clinic, Nandyala</p>
-              </div>
+            {/* Doctor Photo */}
+            <div className="order-2 lg:order-1 rounded-2xl overflow-hidden">
+              <Image
+                src="/dr-sireesha.png"
+                alt="Dr. Sireesha — MD Dermatology, Yashvini Skin & Hair Clinic, Nandyala"
+                width={600}
+                height={700}
+                className="w-full h-auto object-cover"
+              />
             </div>
             {/* Text */}
             <div className="order-1 lg:order-2">

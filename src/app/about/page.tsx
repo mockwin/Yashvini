@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -31,22 +32,16 @@ export default function AboutPage() {
       <section className="py-16" style={{ backgroundColor: "#FAF8F5" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            {/* Placeholder Image */}
-            <div className="rounded-2xl overflow-hidden sticky top-24" style={{ background: "linear-gradient(135deg, #1A6B6B, #2D9B9B)", minHeight: 420 }}>
-              <div className="h-full flex flex-col items-center justify-center p-10 text-white text-center" style={{ minHeight: 420 }}>
-                <div className="w-32 h-32 rounded-full mb-5 flex items-center justify-center text-6xl" style={{ backgroundColor: "rgba(255,255,255,0.15)" }}>👩‍⚕️</div>
-                <p className="text-2xl font-bold">Dr. Sireesha</p>
-                <p className="text-sm text-white/70 mt-1">MD Dermatology</p>
-                <div className="mt-6 space-y-2 text-sm text-white/60">
-                  <p>Yashvini Skin &amp; Hair Clinic</p>
-                  <p>Nandyala, Andhra Pradesh</p>
-                </div>
-                <div className="mt-6 flex flex-wrap justify-center gap-2">
-                  {["MD Dermatology", "IADVL Member", "15+ Years"].map((b) => (
-                    <span key={b} className="px-3 py-1 rounded-full text-xs font-semibold" style={{ backgroundColor: "rgba(201,168,76,0.25)", color: "#C9A84C" }}>{b}</span>
-                  ))}
-                </div>
-              </div>
+            {/* Doctor Photo */}
+            <div className="rounded-2xl overflow-hidden sticky top-24">
+              <Image
+                src="/dr-sireesha.png"
+                alt="Dr. Sireesha — MD Dermatology, Yashvini Skin & Hair Clinic, Nandyala"
+                width={600}
+                height={700}
+                className="w-full h-auto object-cover"
+                priority
+              />
             </div>
 
             {/* Text Content */}

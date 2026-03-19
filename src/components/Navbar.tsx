@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const skinItems = [
   { label: "Acne Treatment", href: "/skin-treatments/acne-treatment" },
@@ -110,13 +111,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex flex-col leading-tight">
-            <span className="text-xl font-bold" style={{ color: "#1A6B6B" }}>
-              Yashvini
-            </span>
-            <span className="text-xs font-medium tracking-wide" style={{ color: "#C9A84C" }}>
-              Skin &amp; Hair Clinic
-            </span>
+          <Link href="/" className="flex items-center gap-2.5">
+            <Image
+              src="/logo.png"
+              alt="Yashvini Skin and Hair Clinic logo"
+              width={65}
+              height={65}
+              className="object-contain"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-bold" style={{ color: "#1A6B6B" }}>
+                Yashvini
+              </span>
+              <span className="text-xs font-medium tracking-wide" style={{ color: "#C9A84C" }}>
+                Skin &amp; Hair Clinic
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav */}
