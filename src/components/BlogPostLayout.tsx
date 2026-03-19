@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface BlogPostLayoutProps {
@@ -84,7 +85,9 @@ export default function BlogPostLayout({
             {/* Sidebar */}
             <aside className="space-y-5">
               <div className="bg-white rounded-2xl p-5 shadow-sm sticky top-24">
-                <div className="w-full h-28 rounded-xl mb-4 flex items-center justify-center text-5xl" style={{ background: "linear-gradient(135deg, #1A6B6B, #2D9B9B)" }}>👩‍⚕️</div>
+                <div className="w-full rounded-xl mb-4 overflow-hidden">
+                  <Image src="/dr-sireesha.png" alt="Dr. Sireesha — MD Dermatology" width={300} height={200} className="w-full h-auto object-cover" />
+                </div>
                 <p className="font-bold text-sm mb-0.5" style={{ color: "#2D2D2D" }}>Dr. Sireesha</p>
                 <p className="text-xs mb-1" style={{ color: "#6B6B6B" }}>MD Dermatology · Nandyala</p>
                 <p className="text-xs mb-4" style={{ color: "#6B6B6B" }}>Yashvini Skin &amp; Hair Clinic</p>
